@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+}
+
+html body {
+  height: 100%;
+}
+
+html body #canvasZone {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html body #canvasZone #canvas {
+  height: 100%;
+  display: block;
+}
+/*# sourceMappingURL=index.css.map */
