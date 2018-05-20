@@ -2,7 +2,7 @@
  * @Author: wynnxin 
  * @Date: 2018-05-20 01:20:05 
  * @Last Modified by: wynnxin
- * @Last Modified time: 2018-05-20 01:29:36
+ * @Last Modified time: 2018-05-20 11:56:41
  */
 
 /**
@@ -15,11 +15,10 @@ window.onload = () => {
   startAnimation();
 };
 var ctx;
-const r = 4;
 //弧度
 var radian;
 //弧度增量
-const radianDecrement = Math.PI / 360 * 2;
+const radianDecrement = Math.PI / 360;
 //起始弧度
 const startRadian = Math.PI;
 
@@ -29,14 +28,14 @@ const startAnimation = () => {
   loveHeart();
 };
 
-// x坐标
-const coordinateX = t => 100 + r * (16 * Math.pow(Math.sin(t), 3));
+// x坐标 => 4倍放大曲线
+const coordinateX = t => 150 + 4 * (16 * Math.pow(Math.sin(t), 3));
 
-//y坐标
+//y坐标 => 4倍放大曲线
 const coordinateY = t => {
   return (
-    50 -
-    r *
+    75 -
+    4 *
       (13 * Math.cos(t) -
         5 * Math.cos(2 * t) -
         2 * Math.cos(3 * t) -
@@ -57,7 +56,7 @@ const loveHeart = () => {
   //设置循环连点
   setInterval(() => {
     dotToLine();
-  }, 10);
+  }, 5);
 };
 
 const dotToLine = () => {
